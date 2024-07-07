@@ -1,0 +1,73 @@
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Add margin for better spacing */
+}
+
+h1 {
+    text-align: center;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+}
+
+.thumbnails {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thumbnails.bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.thumbnails li {
+    margin: 5px; /* Adjust margin for better spacing */
+    margin-left: 10px; /* Adjust left margin */
+    margin-right: 10px; /* Adjust right margin */
+}
+
+.thumbnails img {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%);
+    width: 150px; /* Set width of thumbnails */
+    height: auto;
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.thumbnails img:hover,
+.thumbnails img.active {
+    transform: scale(1.1); /* Scale image up */
+    filter: grayscale(0%); /* Remove grayscale filter */
+}
+
+.thumbnails img:not(:hover):not(.active) {
+    filter: grayscale(100%);
+}
